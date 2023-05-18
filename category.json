@@ -1,0 +1,116 @@
+[
+    {
+        "category_1": "Marvel",
+        "heroes": [
+            {
+                "id": "1",
+                "picture": "https://i.ibb.co/z8fP6KF/marvel-7.jpg",
+                "name": "Iron Man",
+                "price": 19.99,
+                "rating": 4.5,
+                "seller": "Marvel Store",
+                "quantity": 10,
+                "description": "Iron Man is a fictional superhero appearing in American comic books published by Marvel Comics. He is depicted as a wealthy, genius inventor, and business magnate.",
+                "category_name": "Marvel"
+            },
+            {
+                "id": "2",
+                "picture": "https://i.ibb.co/WsnRcR6/marvel-6.jpg",
+                "name": "Spider-Man",
+                "price": 24.99,
+                "rating": 4.2,
+                "seller": "Marvel Store",
+                "quantity": 5,
+                "description": "Spider-Man is a fictional superhero created by writer-editor Stan Lee and writer-artist Steve Ditko. He first appeared in Amazing Fantasy #15 in 1962.",
+                "category_name": "Marvel"
+            },
+            {
+                "id": "3",
+                "picture": "https://i.ibb.co/Pm5yKNJ/marvel-1.jpg",
+                "name": "Captain America",
+                "price": 29.99,
+                "rating": 4.8,
+                "seller": "Marvel Store",
+                "quantity": 2,
+                "description": "Captain America is a superhero appearing in American comic books published by Marvel Comics. The character was created by cartoonists Joe Simon and Jack Kirby.",
+                "category_name": "Marvel"
+            }
+        ]
+    },
+    {
+        "category_2": "DC",
+        "heroes": [
+            {
+                "id": "1",
+                "picture": "https://i.ibb.co/4SNPYNt/DC-6.jpg",
+                "name": "Superman",
+                "price": 21.99,
+                "rating": 4.6,
+                "seller": "DC Store",
+                "quantity": 8,
+                "description": "Superman is a fictional superhero. The character was created by writer Jerry Siegel and artist Joe Shunter and first appeared in Action Comics #1 in 1938.",
+                "category_name": "DC"
+            },
+            {
+                "id": "2",
+                "picture": "https://i.ibb.co/3m6wCQy/incredible-hulk-gf0782b450-1920.jpg",
+                "name": "Batman",
+                "price": 26.99,
+                "rating": 4.4,
+                "seller": "DC Store",
+                "quantity": 3,
+                "description": "Batman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger.",
+                "category_name": "DC"
+            },
+            {
+                "id": "3",
+                "picture": "https://i.ibb.co/qCwsD40/DC-2.jpg",
+                "name": "Wonder Woman",
+                "price": 31.99,
+                "rating": 4.7,
+                "seller": "DC Store",
+                "quantity": 6,
+                "description": "Wonder Woman is a super heroine appearing in American comic books published by DC Comics. The character is a founding member of the Justice League.",
+                "category_name": "DC"
+            }
+        ]
+    },
+    {
+        "category_3": "Star Wars",
+        "heroes": [
+            {
+                "id": "1",
+                "picture": "https://i.ibb.co/J2dqZ80/starwars-1.png",
+                "name": "Luke Skywalker",
+                "price": 17.99,
+                "rating": 4.3,
+                "seller": "Star Wars Store",
+                "quantity": 12,
+                "description": "Luke Skywalker is a fictional character and the main protagonist of the original film trilogy of the Star Wars franchise. He is a Jedi Knight.",
+                "category_name": "Star Wars"
+            },
+            {
+                "id": "2",
+                "picture": "https://i.ibb.co/WVPyhCj/starwars-2.jpg",
+                "name": "Darth Vader",
+                "price": 23.99,
+                "rating": 4.1,
+                "seller": "Star Wars Store",
+                "quantity": 4,
+                "description": "Darth Vader is a fictional character in the Star Wars franchise. He is the main antagonist of the original trilogy and is known for his iconic black armor.",
+                "category_name": "Star Wars"
+            },
+            {
+                "id": "3",
+                "picture": "https://i.ibb.co/XL3fw1K/starwars-5.jpg",
+                "name": "Yoda",
+                "price": 27.99,
+                "rating": 4.9,
+                "seller": "Star Wars Store",
+                "quantity": 9,
+                "description": "Yoda is a fictional character in the Star Wars franchise. He is a legendary Jedi Master known for his wisdom, knowledge, and exceptional light saver skills.",
+                "category_name": "Star Wars"
+            }
+        ]
+    }
+]
