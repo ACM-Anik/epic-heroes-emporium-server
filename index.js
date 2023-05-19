@@ -25,7 +25,7 @@ const client = new MongoClient(uri, {
 
 async function run() {
     try {
-        await client.connect();
+         client.connect();
 
         const toysCollection = client.db('epic-heros-emporium').collection('actionToys');
 
