@@ -25,7 +25,7 @@ const client = new MongoClient(uri, {
 
 async function run() {
     try {
-         client.connect();
+        client.connect();
 
         const toysCollection = client.db('epic-heros-emporium').collection('actionToys');
 
@@ -42,9 +42,9 @@ async function run() {
             res.send(result);
         });
 
-        app.get('/myToys/:email', async(req, res) => {
+        app.get('/myToys/:email', async (req, res) => {
             const email = req.params.email;
-            const result = await toysCollection.find({seller_email: email}).toArray();
+            const result = await toysCollection.find({ seller_email: email }).toArray();
             res.send(result);
         })
 
@@ -53,22 +53,28 @@ async function run() {
         // const indexOptions = { name: "toyName"};
         // const result = await toysCollection.createIndex(indexKeys, indexOptions);
 
-        app.get('/toySearchByName/:search', async (req, res) =>{
+        app.get('/toySearchByName/:search', async (req, res) => {
             const searchName = req.params.search;
             console.log(searchName);
 
-            const result = await toysCollection.find({toy_name: { $regex: searchName, $options: 'i' }}).toArray();
+            const result = await toysCollection.find({ toy_name: { $regex: searchName, $options: 'i' } }).toArray();
 
             res.send(result);
         })
 
-        app.post('/actionToys', async(req, res) => {
+        app.post('/actionToys', async (req, res) => {
             const newToy = req.body;
             console.log(newToy);
             const result = await toysCollection.insertOne(newToy);
             res.send(result);
         })
 
+        app.delete('/actionToys/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: new ObjectId(id) }
+            const result = await toysCollection.deleteOne(query);
+            res.send(result);
+        })
 
         // Send a ping to confirm a successful connection
         await client.db("admin").command({ ping: 1 });
