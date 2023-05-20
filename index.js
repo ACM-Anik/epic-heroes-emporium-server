@@ -30,8 +30,8 @@ async function run() {
         const toysCollection = client.db('epic-heros-emporium').collection('actionToys');
 
         app.get('/actionToys', async (req, res) => {
-            const cursor = toysCollection.find();
-            const result = await cursor.limit(20).toArray();
+            const cursor = toysCollection.find().limit(20);
+            const result = await cursor.toArray();
             res.send(result);
         })
 
@@ -44,9 +44,21 @@ async function run() {
 
         app.get('/myToys/:email', async(req, res) => {
             const email = req.params.email;
-            console.log(email);
-            // // const query = 
             const result = await toysCollection.find({seller_email: email}).toArray();
+            res.send(result);
+        })
+
+
+        // const indexKeys = {toy_name: 1};
+        // const indexOptions = { name: "toyName"};
+        // const result = await toysCollection.createIndex(indexKeys, indexOptions);
+
+        app.get('/toySearchByName/:search', async (req, res) =>{
+            const searchName = req.params.search;
+            console.log(searchName);
+
+            const result = await toysCollection.find({toy_name: { $regex: searchName, $options: 'i' }}).toArray();
+
             res.send(result);
         })
 
