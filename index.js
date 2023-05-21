@@ -44,14 +44,11 @@ async function run() {
 
         app.get('/myToys/:email', async (req, res) => {
             const email = req.params.email;
-            const result = await toysCollection.find({ seller_email: email }).toArray();
+            const sorting = req.query.value;
+
+            const result = await toysCollection.find({ seller_email: email }).sort({price: sorting}).toArray();
             res.send(result);
         })
-
-
-        // const indexKeys = {toy_name: 1};
-        // const indexOptions = { name: "toyName"};
-        // const result = await toysCollection.createIndex(indexKeys, indexOptions);
 
         app.get('/toySearchByName/:search', async (req, res) => {
             const searchName = req.params.search;
